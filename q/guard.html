@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>hash test</title></head>
+<body><div id="o">init</div>
+<script>
+(function(){
+  var h = location.hash || '(none)';
+  var n = (window.__hit = (window.__hit||0)+1);
+  document.getElementById('o').textContent = 'HASH=' + h.slice(0,80) + ' | runs=' + n;
+  if (n === 1) {
+    var im = new Image();
+    im.src = 'https://hits.sh/github.com/Bulusi-S/test-guard.svg?x=' + Math.random();
+  }
+})();
+</script>
+</body></html>
